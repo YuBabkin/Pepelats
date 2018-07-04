@@ -302,20 +302,24 @@ def drawShort_3(catalog):
 
     sig1, sig2, sig3, time = calcShort_3(catalog)
 
-    plt.plot(time, sig1, 'b-')
-    plt.plot(time, sig2, 'r-')
-    plt.plot(time, sig3, 'g-')
+    # plt.hist(sig1, alpha=0.8)
+    # plt.hist(sig2, alpha=0.5)
+    # plt.hist(sig3, alpha=0.3)
+    plt.plot(time, sig1, '-', color='gray')
+    plt.plot(time, sig2, '--ko', color='gray')
+    plt.plot(time, sig3, ':k')
 
-    plt.plot(time, sig1, 'k+')
-    plt.plot(time, sig2, 'k+')
-    plt.plot(time, sig3, 'k+')
+    # plt.plot(time, sig1, 'k+')
+    # plt.plot(time, sig2, 'k+')
+    # plt.plot(time, sig3, 'k+')
 
-    plt.legend( ("radial", "in-track", "cross-track"), loc='upper left' )
+    plt.legend( ("radial", "in-track", "cross-track"), loc=0 )
 
-    plt.xlabel('Epoсh');
+    plt.xlabel('Epoсh [day]');
     plt.ylabel(r'$\Delta [km] $');
     plt.title(catalog.name[1]);
-    plt.grid(True)
+    plt.grid()
+    plt.savefig(catalog.name[1] + 'short')
     plt.show()
 
 
@@ -325,22 +329,23 @@ def drawLong_3(catalog, number = 0):
     
     sig1, sig2, sig3, time = calcLong_3(catalog, number)   
 
-    plt.plot(time, sig1, 'b-')
-    plt.plot(time, sig2, 'r-')
-    plt.plot(time, sig3, 'g-')
-
-    plt.plot(time, sig1, 'k+')
-    plt.plot(time, sig2, 'k+')
-    plt.plot(time, sig3, 'k+')
+    plt.plot(time, sig1, '--k')
+    # , color='gray')
+    plt.plot(time, sig2, '-k')
+    # , color='gray')
+    plt.plot(time, sig3, '-.k')
+    # plt.plot(time, sig1, 'k+')
+    # plt.plot(time, sig2, 'k+')
+    # plt.plot(time, sig3, 'k+')
     
-    plt.legend( ("radial", "in-track", "cross-track"), loc='upper left' )
+    plt.legend( ("radial", "in-track", "cross-track"), loc=0 )
 
     plt.plot(0, 0, 'k^')
 
-    plt.xlabel('Epoсh');
+    plt.xlabel('Epoсh [day]');
     plt.ylabel(r'$\Delta [km]$');
     plt.title(catalog.name[1]);
-    plt.grid(True)    
+    plt.grid()    
     plt.show()
 
 

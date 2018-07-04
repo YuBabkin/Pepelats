@@ -15,6 +15,8 @@ from calcsigma import drawLong_R
 from calcsigma import drawLong_3
 from calcsigma import drawLong_ephem
 
+import matplotlib.pyplot as mpl
+
 
 def oneSat(name_file):
     '''  Открытие файла -- каталога TLE
@@ -28,7 +30,7 @@ def oneSat(name_file):
 #    drawLong_R(catalog, 10)
 
     print('Орбитальные ошибки:')
-    drawShort_3(catalog)
+    # drawShort_3(catalog)
     drawLong_3(catalog)
 #    drawLong_3(catalog, 10)
 
@@ -47,7 +49,9 @@ def plotGraf():
 
     print('Два раза Ку, земляне!')
 
-    oneSat('catalogs/zarya_2018_01_01_15.txt')
+    mpl.style.use('./presentation.mplstyle')
+
+    oneSat('catalogs/ISS_2018-03-01+31.txt')
     
     oneSat('catalogs/navstar50_2018_01_01_30.txt')
         
