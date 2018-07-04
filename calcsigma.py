@@ -313,13 +313,13 @@ def drawShort_3(catalog):
     # plt.plot(time, sig2, 'k+')
     # plt.plot(time, sig3, 'k+')
 
-    plt.legend( ("radial", "in-track", "cross-track"), loc=0 )
+    # plt.legend( ("radial", "in-track", "cross-track"), loc=0 )
 
     plt.xlabel('Epoсh [day]');
     plt.ylabel(r'$\Delta [km] $');
     plt.title(catalog.name[1]);
     plt.grid()
-    plt.savefig(catalog.name[1] + 'short')
+    plt.savefig(catalog.name[1] + 'short', dpi=300)
     plt.show()
 
 
@@ -338,7 +338,7 @@ def drawLong_3(catalog, number = 0):
     # plt.plot(time, sig2, 'k+')
     # plt.plot(time, sig3, 'k+')
     
-    plt.legend( ("radial", "in-track", "cross-track"), loc=0 )
+    # plt.legend( ("radial", "in-track", "cross-track"), loc=0 )
 
     plt.plot(0, 0, 'k^')
 
@@ -346,6 +346,7 @@ def drawLong_3(catalog, number = 0):
     plt.ylabel(r'$\Delta [km]$');
     plt.title(catalog.name[1]);
     plt.grid()    
+    plt.savefig(catalog.name[1] + 'long', dpi=300)
     plt.show()
 
 
