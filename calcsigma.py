@@ -305,9 +305,9 @@ def drawShort_3(catalog):
     # plt.hist(sig1, alpha=0.8)
     # plt.hist(sig2, alpha=0.5)
     # plt.hist(sig3, alpha=0.3)
-    plt.plot(time, sig1, '-', color='gray')
-    plt.plot(time, sig2, '--ko', color='gray')
-    plt.plot(time, sig3, ':k')
+    plt.plot(time, sig1, '--k')
+    plt.plot(time, sig2, '-k')
+    plt.plot(time, sig3, '-.k')
 
     # plt.plot(time, sig1, 'k+')
     # plt.plot(time, sig2, 'k+')

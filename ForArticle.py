@@ -30,7 +30,7 @@ def oneSat(name_file):
 #    drawLong_R(catalog, 10)
 
     print('Орбитальные ошибки:')
-    # drawShort_3(catalog)
+    drawShort_3(catalog)
     drawLong_3(catalog)
 #    drawLong_3(catalog, 10)
 
