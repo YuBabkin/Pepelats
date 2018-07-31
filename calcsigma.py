@@ -316,7 +316,7 @@ def drawShort_3(catalog):
     # plt.legend( ("radial", "in-track", "cross-track"), loc=0 )
 
     plt.xlabel('Epoсh [day]');
-    plt.ylabel(r'$\Delta [km] $');
+    plt.ylabel(r'$\Delta_i^{i + 1} [km] $');
     plt.title(catalog.name[1]);
     plt.grid()
     plt.savefig(catalog.name[1] + 'short', dpi=300)
@@ -343,7 +343,7 @@ def drawLong_3(catalog, number = 0):
     plt.plot(0, 0, 'k^')
 
     plt.xlabel('Epoсh [day]');
-    plt.ylabel(r'$\Delta [km]$');
+    plt.ylabel(r'$\Delta_i^1 [km]$');
     plt.title(catalog.name[1]);
     plt.grid()    
     plt.savefig(catalog.name[1] + 'long', dpi=300)
